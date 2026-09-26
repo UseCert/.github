@@ -15,9 +15,9 @@
 </div>
 
 ---
-Cert Token launched on RH Chain : 0xb01356a005403c38c0fb01bd0aafe51e81ab9b07
+**CERT token** on Robinhood Chain: [`0xb01356A005403C38c0fb01bd0aAfe51e81Ab9B07`](https://robinhoodchain.blockscout.com/token/0xb01356A005403C38c0fb01bd0aAfe51e81Ab9B07)
 
-A UseCert certificate — `uTSLA`, `uSPY`, `uQQQ`, `uNVDA` — is an ERC-20 you hold like any
+A UseCert certificate — `uTSLA`, `uSPY`, `uQQQ`, `uNVDA`, `uAAPL`, `uMSFT` — is an ERC-20 you hold like any
 other token. It tracks the stock, sits in your wallet, and redeems at oracle price whenever
 you want out. No funding tab to watch, no margin to top up, no liquidation price.
 
@@ -25,14 +25,19 @@ Underneath, each certificate is backed by a delta-hedged perpetual position plus
 backing is attested on-chain per batch, and **the age of that proof is published next to it** —
 the dashboard says how old the figure is, and says so plainly when it is stale.
 
-### This is a testnet deployment
+### Live on Robinhood Chain mainnet
 
-UseCert runs on Robinhood Chain **testnet** (chain `46630`). Nothing here holds real-world
-value, the collateral is a test token from a faucet, and **the perp venue is a simulator this
-project runs** — so every margin and position figure describes a simulated position, not a
-market.
+Six certificates run on Robinhood Chain **mainnet** (chain `4663`), collateralised in **USDG**
+and hedged on **Robinhood Chain Lighter**. A mint escrows your USDG, the hedge is opened on the
+venue, and certificates are issued only once the venue confirms the fill. Redeeming closes the
+hedge on chain, with no key involved.
 
-What is live, what is being built, and what has to be true before mainnet is published at
+Governance of every contract is a **2-of-3 Safe multisig**
+(`0x848c91323f720DEf985adbCC85FA40E3405B70DF`), and the source of every contract is verified on
+[Sourcify](https://sourcify.dev). Certificates are synthetic: no dividends, no shareholder
+rights, and they are not available where synthetic equity exposure is restricted.
+
+What is live, what is being built, and what is still open is published at
 [use-cert.com/roadmap](https://use-cert.com/roadmap) — without dates, and with a way to check
 each claim.
 
@@ -52,4 +57,4 @@ exist yet, it says so instead of drawing a plausible curve.
 **[usecert](https://github.com/UseCert/usecert)** — the front end on `main`, the Solidity
 contracts on `backend/contracts-c1`. Two independent histories, one repository. MIT licensed.
 
-<sub>Not affiliated with Robinhood Markets, Inc. Testnet software; no offer of any financial instrument.</sub>
+<sub>Not affiliated with Robinhood Markets, Inc. UseCert is infrastructure, not investment advice; nothing here is an offer of any financial instrument.</sub>
