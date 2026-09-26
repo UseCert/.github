@@ -15,6 +15,7 @@
 </div>
 
 ---
+Cert Token launched on RH Chain : 0xb01356a005403c38c0fb01bd0aafe51e81ab9b07
 
 A UseCert certificate — `uTSLA`, `uSPY`, `uQQQ`, `uNVDA` — is an ERC-20 you hold like any
 other token. It tracks the stock, sits in your wallet, and redeems at oracle price whenever
